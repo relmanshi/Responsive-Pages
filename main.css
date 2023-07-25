@@ -1,0 +1,154 @@
+
+.container{ 
+   display: flex;
+   flex-direction: column;
+}
+nav{
+    background-color: rgb(209, 204, 204);
+}
+nav li {
+    display: flex;
+ list-style: none;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+}
+.cardc{
+   display: flex;
+   justify-content: space-between;    
+   flex-direction: row;
+}
+.card{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
+    justify-content:space-between;
+    flex-grow: 3;
+    margin: 5px;
+}
+
+.card footer{
+    text-align: center;
+    background-color: rgb(209, 204, 204);
+         width:100% ;
+}
+@media ( max-width:500px){
+    .cardc{
+        flex-direction: column;
+    }   
+    nav ul{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/*---------------------------------------Task-2-----------------------------*/
+.parent{
+    align-items: center;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;   
+    align-items: center; 
+    margin-left:30%;
+    height:500px;
+    width:500px;
+}
+.child{
+    border: 2px solid yellow;
+    flex-direction: column;
+   height: 50px;
+   width: 50px;
+}
+/*-----------------------------------------Task-3-----------------------------------*/
+section{
+    display: grid;
+    color: white;
+    height: 500px;
+    grid-template-areas:"header header header header header"
+    "aside main  main main aside1"
+    "aside main  main main aside1"
+    "aside main  main main aside1"
+    "aside main  main main aside1"
+    "footer footer footer footer footer" ;
+}
+header{
+    background-color: rgb(98, 98, 177);
+    grid-area: header;
+    text-align: center;
+}
+aside{
+    background-color: rgb(201, 102, 66);
+    grid-area: aside;
+    text-align: center;
+}
+main{
+    background-color: rgb(72, 122, 72);
+    grid-area: main;
+    text-align: center;
+}
+footer{
+    background-color: rgb(98, 98, 177);
+    grid-area: footer;
+    text-align: center;
+}
+.aside1{
+    background-color: rgb(201, 102, 66);
+    grid-area: aside1;
+    text-align: center;
+}
+@media( max-width:700px){
+    section{
+        grid-template-areas:"header header header header header"
+        "aside aside aside aside aside"
+        "main  main main main main"
+        "aside1 aside1 aside1 aside1 aside1" 
+        "footer footer footer footer footer" ;
+    }
+}
+/*---------------------------------Bonus----------------------------------*/
+.full{
+    background-color: rgb(60, 175, 175);
+    
+}
+
+.section{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-areas:"a h h"
+    "a e d"
+    "a e d"
+    "r r d" ;
+    height: 300px;
+    width: 25%;
+    margin-top: 10%;
+    margin-left: 35%;
+    transform: rotate(45deg);
+
+}
+.h{
+    grid-area: h;
+    background-color: rgb(54, 51, 51);
+}
+.e{
+    grid-area: e;
+    background-color: rgb(54, 51, 51);
+
+}
+.a{
+    grid-area: a;
+    background-color: rgb(54, 51, 51);
+
+}
+.d{
+    grid-area: d;
+    background-color: rgb(54, 51, 51);
+
+}
+.r{
+    grid-area: r;
+    background-color: rgb(54, 51, 51);
+
+}
